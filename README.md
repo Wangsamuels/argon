@@ -2,13 +2,11 @@
 
 Hourly inference that decides when Uniswap LP should be **in the pool** and when it should sit in **cash**.
 
-Argon is a dual-chain LP vault for [Arbitrum Open House Singapore: Online Buildathon](https://www.hackquest.io/hackathons/Arbitrum-Open-House-Singapore-Online-Buildathon). A user deposits liquidity once. Every hour an agent publishes a 1-hour price forecast, then mints or burns Uniswap positions on the user’s behalf. The user never clicks in and out of ranges.
+Argon is a dual-chain LP vault. A user deposits liquidity once. Every hour an agent publishes a 1-hour price forecast, then mints or burns Uniswap positions on the user’s behalf. The user never clicks in and out of ranges.
 
 **Chains:** Arbitrum One (`42161`) and Robinhood Chain (`4663`).  
 **DEX:** Uniswap v3 and v4.  
 **Volatile legs the agent forecasts:** `ETH/USD` and `LINK/USD` (LINK/ETH is derived).
-
-Module graph, hourly loop, and decision policy are in the [Argon architecture canvas](/Users/wang/.cursor/projects/Users-wang-Untitled/canvases/argon-architecture.canvas.tsx) — open it beside the chat.
 
 ---
 
