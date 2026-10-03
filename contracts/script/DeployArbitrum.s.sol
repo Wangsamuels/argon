@@ -24,6 +24,7 @@ contract DeployArbitrum is DeployBase {
             deployer, keeper, address(reg), address(oracle), ChainConfig.ARB_WETH, ChainConfig.ARB_USDC, 6
         );
         vault.setDepositFeeBps(10);
+        vault.setRouter(ChainConfig.ARB_ROUTER); // lets one-sided deposits (WETH only / USDC only) enter
         UniswapV3Adapter adapter = new UniswapV3Adapter(
             address(vault), ChainConfig.ARB_NPM, ChainConfig.ARB_WETH, ChainConfig.ARB_USDC, ChainConfig.ARB_FEE
         );
