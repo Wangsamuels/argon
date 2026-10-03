@@ -226,7 +226,7 @@ On that redeploy:
 
 - Arbitrum deposit fee `setDepositFeeBps(10)`. Robinhood `setDepositFeeBps(60)`. These cover the Chainlink update threshold. The fee defaults to 0 until the owner sets it.
 - Robinhood `ChainlinkEthOracle` `maxDelay` is 90_000 seconds (25h). The oracle already on Robinhood still uses 1 hour and will reject deposits after the feed goes quiet.
-- `setRouter` stays unset. Single-asset swap-before-enter stays off until an owner sets a router. Do not set it for the hackathon demo.
+- Both deploy scripts set the chain's canonical Uniswap `SwapRouter02`, so a WETH-only or stable-only deposit can be balanced before entering the pool. The vault grants only an exact, per-swap allowance and clears it immediately after the swap.
 - The keeper key is read only by the clock dyno. The web process ignores `KEEPER_PRIVATE_KEY`. Do not put that key in Vercel, logs, or the model pickle. A multisig owner is not in this build.
 
 Withdraw still pays the user's pro-rata WETH and stable together. That matches the shared-vault design. Per-signer gates stay off-chain (`POST /gates`); the vault's one Uniswap position still follows the on-chain Balanced bands.

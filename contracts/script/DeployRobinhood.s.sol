@@ -25,6 +25,7 @@ contract DeployRobinhood is DeployBase {
         ArgonVault vault =
             new ArgonVault(deployer, keeper, address(reg), address(oracle), ChainConfig.RH_WETH, ChainConfig.RH_USDG, 6);
         vault.setDepositFeeBps(60);
+        vault.setRouter(ChainConfig.RH_ROUTER); // lets one-sided deposits (WETH only / USDG only) enter
         UniswapV3Adapter adapter = new UniswapV3Adapter(
             address(vault), ChainConfig.RH_NPM, ChainConfig.RH_WETH, ChainConfig.RH_USDG, ChainConfig.RH_FEE
         );

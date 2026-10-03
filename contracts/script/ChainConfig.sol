@@ -21,6 +21,7 @@ library ChainConfig {
     address constant RH_USDG = 0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168;
     address constant RH_NPM = 0x73991a25C818Bf1f1128dEAaB1492D45638DE0D3;
     address constant RH_ETH_USD = 0x78F3556b67E17Df817D51Ef5a990cDaF09E8d3A9;
+    address constant RH_ROUTER = 0xCaf681a66D020601342297493863E78C959E5cb2; // Uniswap SwapRouter02
     uint24 constant RH_FEE = 500;
     uint8 constant RH_POOL_ID = 4;
 }

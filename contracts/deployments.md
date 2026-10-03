@@ -10,7 +10,9 @@ Redeployed 2026-10-03 with the scheduled-news pause. Addresses differ per chain 
 | UniswapV3Adapter | [`0x05734481536644bc20e671Db28f5b4c05B7D64D4`](https://arbiscan.io/address/0x05734481536644bc20e671Db28f5b4c05B7D64D4) | [`0xEDa50F3F5530E9BFFD427c1DB0E0a8f3D05cCC9D`](https://robinhoodchain.blockscout.com/address/0xEDa50F3F5530E9BFFD427c1DB0E0a8f3D05cCC9D) |
 
 - Arbitrum: gated **pool 1** (WETH/USDC 500), deposit fee 10 bps, USDC/USD feed `0x50834F3163758fcC1Df9973b6e91f0F0F0434aD3`.
-- Robinhood: gated **pool 4** (WETH/USDG 500), deposit fee 60 bps.
+- Robinhood: gated **pool 4** (WETH/USDG 500), deposit fee 60 bps, Uniswap SwapRouter02
+  [`0xCaf681a66D020601342297493863E78C959E5cb2`](https://robinhoodchain.blockscout.com/address/0xCaf681a66D020601342297493863E78C959E5cb2)
+  ([configuration transaction](https://robinhoodchain.blockscout.com/tx/0x916826ad867715455303b2005659ee3432f21c5af41e95e366adad072186ddf2)).
 
 ## News pause
 
