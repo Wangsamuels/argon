@@ -102,6 +102,8 @@ There is **no** public `POST /predict`. CORS allows `GET` and `POST` from `FRONT
 
 Pool cards bind `aprPct`, `poolTvlUsd`, and `ethUsd`. Robinhood APR is the fixed Uniswap WETH/USDG figure `35.51`. Poll `/pools` about every 15 seconds. A missing `txHash` does not mean the forecast is missing; `DRY_RUN` leaves it null.
 
+`/vault` and `/portfolio/:address` read Arbitrum and Robinhood concurrently. Chain-wide vault state is cached for 12 seconds so simultaneous dashboard polls share the same RPC work; override this with `PORTFOLIO_CACHE_SECONDS` and bound an individual RPC request with `PORTFOLIO_RPC_TIMEOUT_SECONDS`.
+
 Warmup on the dashboard uses `hoursUntilFirstDecision` from `/status` (stored inferences). `onchainForecastCount` stays 0 until live submits.
 
 Signer gate message, signed with `personal_sign`:
